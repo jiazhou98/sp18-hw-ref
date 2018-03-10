@@ -118,4 +118,9 @@ def find_cycle(head):
     Output:
         (bool) whether or not there is a cycle in the linked list.
     """
-    pass
+    while head.next_node != None:
+        head = head.next_node
+        if head.next_node.next_node == head:
+            return True
+    return False
+
